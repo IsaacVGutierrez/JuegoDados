@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JuegoDados.MainPage">
+
+    <Grid>
+        <Image Source="inicio.png" Aspect="AspectFill"  WidthRequest="100" HeightRequest="100" />
+        <StackLayout BackgroundColor="Transparent">
+    
+    
+        
+        <Label FontSize="Title" HorizontalOptions="Center" 
+        TextColor="GhostWhite" Text="Lanzador de Dados" />
+            <Entry Placeholder="INGRESE UN NÚMERO DEL 2 AL 12" PlaceholderColor="GhostWhite" TextColor="GhostWhite"  HorizontalTextAlignment="Center"
+            BackgroundColor="SlateGray"       Keyboard="Numeric" x:Name="TxtNumeroAdivinanza" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+       <StackLayout VerticalOptions="CenterAndExpand" Margin="20" 
+                     Spacing="20">
+            
+            
+        <StackLayout>
+                <Image Source="dado1.png" x:Name="ImgDado1"  WidthRequest="150" HeightRequest="180" />
+                <Image Source="dado1.png" x:Name="ImgDado2" WidthRequest="150" HeightRequest="180"/>
+           </StackLayout>
+            <Button Text="Lanzar dados" CornerRadius="10"
+                    FontSize="Large" FontAttributes="Bold"
+                    Margin="0,20,0,0" TextTransform="None"
+                    BackgroundColor="Purple" TextColor="White"
+                    x:Name="BtnLanzar"
+                    Clicked="BtnLanzar_Clicked"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Resultado:" FontSize="Large"
+                       FontAttributes="Italic" VerticalOptions="Center"
+                       TextColor="Brown"  BackgroundColor="GhostWhite"/>
+                <Label Text=" " FontSize="Large" FontAttributes="Bold"
+                       VerticalOptions="Center" TextColor="red"  BackgroundColor="GhostWhite"
+                      x:Name="LblResultado"/>
+           </StackLayout>
+
+        </StackLayout>
+   </StackLayout>
+      
+        </Grid>
+</ContentPage>
